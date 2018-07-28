@@ -17,7 +17,7 @@
 
 <html>
 <head>
-	<title>Welcome to Slotify!</title>
+	<title>Welcome to title</title>
 
 	<link rel="stylesheet" type="text/css" href="assets/css/register.css">
 
@@ -36,7 +36,7 @@
 			</script>';
 	}
 	else {
-		echo '<script>
+		echo '<script> 
 				$(document).ready(function() {
 					$("#loginForm").show();
 					$("#registerForm").hide();

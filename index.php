@@ -1,7 +1,7 @@
 <?php
 include("includes/config.php");
 
-//session_destroy(); LOGOUT
+
 
 if(isset($_SESSION['userLoggedIn'])) {
 	$userLoggedIn = $_SESSION['userLoggedIn'];
@@ -14,14 +14,18 @@ else {
 
 <html>
 <head>
-	<title>Welcome to Slotify!</title>
+	<title>Welcome to title</title>
 
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
-	
-
+	<div class="mainContainer">
+ <div id="topContainer">
+ 	<div id="navbarContainer">
+ 		
+ 	</div>
+ </div>
 	<div id="nowPlayingBarContainer">
 
 		<div id="nowPlayingBar">
@@ -39,7 +43,7 @@ else {
 						</span>
 
 						<span class="artistName">
-							<span>Reece Kenney</span>
+							<span>Marry Kenney</span>
 						</span>
 
 					</div>
@@ -125,7 +129,7 @@ else {
 		</div>
 
 	</div>
-
+</div>
 
 </body>
 
