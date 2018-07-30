@@ -161,7 +161,6 @@ html, body {
     padding: 25px;
     display: flex;
     flex-direction: column;
-    -ms-flex-direction: column;
 }
 
 .logo {
@@ -169,7 +168,7 @@ html, body {
 }
 
 .logo img {
-    width: 32px;
+    width: 123px;
 }
 
 .navBar .group {

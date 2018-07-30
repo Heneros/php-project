@@ -23,7 +23,31 @@ else {
 	<div class="mainContainer">
  <div id="topContainer">
  	<div id="navbarContainer">
- 		
+ 		<nav class="navBar">
+
+ 			<a href="index.php" class="logo">
+ 				<img src="assets//images/icons/logo.png" alt="logo">
+ 			</a>
+        <div class="group">
+        	<div class="navItem">
+        		<a href="search.php" class="navItemLink">Search
+        			<img src="assets/images/icons/search.png" class="icon" alt="search">
+ 
+        		</a>
+        	</div>
+        </div>
+        <div class="group">
+        	  <div class="navItem">
+        		<a href="search.php" class="navItemLink">Browse</a>
+        	</div>
+        	  <div class="navItem">
+        		<a href="search.php" class="navItemLink">Your Music</a>
+        	</div>
+        	  <div class="navItem">
+        		<a href="search.php" class="navItemLink">Johny Cash</a>
+        	</div>
+        </div>
+ 		</nav>
  	</div>
  </div>
 	<div id="nowPlayingBarContainer">
@@ -39,11 +63,11 @@ else {
 					<div class="trackInfo">
 
 						<span class="trackName">
-							<span>Happy Birthday</span>
+							<span> I Walk the Line.</span>
 						</span>
 
 						<span class="artistName">
-							<span>Marry Kenney</span>
+							<span>Johny Cash</span>
 						</span>
 
 					</div>
@@ -130,7 +154,6 @@ else {
 
 	</div>
 </div>
-
 </body>
 
 </html>
