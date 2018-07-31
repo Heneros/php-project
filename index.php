@@ -1,36 +1,18 @@
-<?php
-include("includes/config.php");
+<?php include ("includes/header.php"); ?>
+		<h1 class="pageHeadingBig">You might also like </h1>
+		<div class="gridViewContainer">
+			<?php 
+			$albumQuery = mysqli_query($con, "SELECT * FROM albums ORDER BY RAND() LIMIT 10");
+			while($row = mysqli_fetch_array($albumQuery)){
+      echo "<div class='gridViewItem'>
+      <img src='" . $row['artworkPath'] . "'>
+      <div class='gridViewInfo'>"
+       . $row['title'] .
+      "</div>
+      </div>";
+			}
+			?>
+		</div>
 
 
-
-if(isset($_SESSION['userLoggedIn'])) {
-	$userLoggedIn = $_SESSION['userLoggedIn'];
-}
-else {
-	header("Location: register.php");
-}
-
-?>
-
-<html>
-<head>
-	<title>Welcome to title</title>
-
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-</head>
-
-<body>
-	<div class="mainContainer">
- <div id="topContainer">
-<?php include("includes/navBarContainer.php"); ?>
-<div id="mainViewContainer">
-	<div id="mainContent">
-		
-	</div>
-</div>
- </div>
- <?php include("includes/nowPlayingBar.php"); ?>
-</div>
-</body>
-
-</html>
+<?php include ("includes/footer.php"); ?>
