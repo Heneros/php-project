@@ -17,21 +17,13 @@
 
 <html>
 <head>
-	<title>Welcome to title</title>
+	<title>Welcome to Slotify!</title>
 
 	<link rel="stylesheet" type="text/css" href="assets/css/register.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="assets/js/register.js">
-		
-
-	</script>
+	<script src="assets/js/register.js"></script>
 </head>
-<script>
-	
-
-
-</script>
 <body>
 	<?php
 
@@ -44,7 +36,7 @@
 			</script>';
 	}
 	else {
-		echo '<script> 
+		echo '<script>
 				$(document).ready(function() {
 					$("#loginForm").show();
 					$("#registerForm").hide();
@@ -152,5 +144,6 @@
 
 		</div>
 	</div>
+
 </body>
 </html>
