@@ -25,6 +25,7 @@ function setTrack(trackId, newPlaylist, play) {
 
 		var track = JSON.parse(data);
 		$(".trackName span").text(track.title);
+
 		$.post("includes/handlers/ajax/getArtistJson.php", { artistId: track.artist }, function(data) {
 			var artist = JSON.parse(data);
 			$(".artistName span").text(artist.name);
@@ -35,8 +36,9 @@ function setTrack(trackId, newPlaylist, play) {
 			$(".albumLink img").attr("src", album.artworkPath);
 		});
 
-		audioElement.setTrack(track.path);
-		audioElement.play();
+
+		audioElement.setTrack(track);
+		playSong();
 	});
 
 	if(play == true) {
@@ -45,6 +47,10 @@ function setTrack(trackId, newPlaylist, play) {
 }
 
 function playSong() {
+	if(audioElement.audio.currentTime == 0) {
+		$.post("includes/handlers/ajax/updatePlays.php", {songId: audioElement.currentlyPlaying.id});
+	}
+
 	$(".controlButton.play").hide();
 	$(".controlButton.pause").show();
 	audioElement.play();
