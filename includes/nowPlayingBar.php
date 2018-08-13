@@ -97,7 +97,16 @@ function setRepeat(){
   var imageName = repeat ? "repeat-active.png": "repeat.png";
   $(".controlButton.repeat img").attr("src", "assets/images/icons/" + imageName);
 }
-
+function setMute(){
+  audioElement.audio.muted = !audioElement.audio.muted
+  var imageName = audioElement.audio.muted  ? "volume-mute.png": "volume.png";
+  $(".controlButton.volume img").attr("src", "assets/images/icons/" + imageName);
+}
+function setShuffle(){
+  shuffle = !shuffle;
+  var imageName = shuffle  ? "shuffle-active.png": "shuffle.png";
+  $(".controlButton.shuffle img").attr("src", "assets/images/icons/" + imageName);
+}
 function setTrack(trackId, newPlaylist, play) {
   currentIndex = currentPlaylist.indexOf(trackId);
   pauseSong();
@@ -177,7 +186,7 @@ function pauseSong() {
 
 				<div class="buttons">
 
-					<button class="controlButton shuffle" title="Shuffle button">
+					<button class="controlButton shuffle" title="Shuffle button" onclick="setShuffle()">
 						<img src="assets/images/icons/shuffle.png" alt="Shuffle">
 					</button>
 
@@ -228,7 +237,7 @@ function pauseSong() {
 		<div id="nowPlayingRight">
 			<div class="volumeBar">
 
-				<button class="controlButton volume" title="Volume button">
+				<button class="controlButton volume" title="Volume button" onclick="setMute()">
 					<img src="assets/images/icons/volume.png" alt="Volume">
 				</button>
 
