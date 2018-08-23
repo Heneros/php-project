@@ -18,7 +18,9 @@ function openPage(url){
   history.pushState(null, null, url);
   
 }
-
+function playFirstSong(){
+ setTrack(tempPlaylist[0], tempPlaylist, true);
+}
 function formatTime(seconds){
   var time = Math.round(seconds);
   var minutes = Math.floor(time / 60);
