@@ -380,7 +380,10 @@ body {
     background-color: #2ebd59;
     border-color: #2ebd59;
 }
-
+.borderBottom{
+    border-bottom: 1px solid pink;
+    margin-bottom: 20px;
+}
 
 
 
