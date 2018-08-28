@@ -9,11 +9,15 @@ var shuffle = false;
 var userLoggedIn;
 var timer;
 
-function createPlaylist(username){
- var alert = prompt("Please enter the name of your playlist");
-  if(alert != null){
-   $.post("includes/handlers/ajax/createPlaylist.php", {name: alert, username: username})
-   .done(function(){
+function createPlaylist(){
+ var popup = prompt("Please enter the name of your playlist");
+  if(popup != null){
+   $.post("includes/handlers/ajax/createPlaylist.php", {name: popup, username: userLoggedIn})
+   .done(function(error){
+      if(error != ""){
+        alert(error);
+        return;
+      }
       openPage("yourMusic.php");
      });
    }
